@@ -47,4 +47,27 @@ public class HackFunctions {
     }
 
 
+    public static List<Integer> matchingStrings(List<String> strings, List<String> queries) {
+        // Write your code here
+
+        List <Integer> numberOfMatchedStrings = new ArrayList<>();
+        for(int i=0;i< queries.size();i++)
+        {
+            int numOfOccurrence = 0;
+            for(int j=0;j< strings.size();j++)
+            {
+                if((queries.get(i)).equals(strings.get(j)))
+                {
+                    numOfOccurrence= numOfOccurrence+1;
+                }
+            }
+            numberOfMatchedStrings.add(numOfOccurrence);
+            System.out.println(numOfOccurrence);
+        }
+
+        return numberOfMatchedStrings;
+
+    }
+
+
 }
