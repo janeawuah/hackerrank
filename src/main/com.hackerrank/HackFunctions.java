@@ -1,6 +1,7 @@
 package main.com.hackerrank;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class HackFunctions {
@@ -66,6 +67,28 @@ public class HackFunctions {
         }
 
         return numberOfMatchedStrings;
+
+    }
+
+
+    public static int findMedian(List<Integer> arr) {
+        // Write your code here
+        int median =0;
+        int listSize = arr.size();
+        int halfSize = listSize/2;
+
+        arr.sort(Comparator.naturalOrder());
+        System.out.println(arr);
+
+        if(listSize%2 ==0)
+        {
+            median = (arr.get(halfSize) + arr.get(halfSize-1))/2;
+        }
+        else{
+            median = arr.get(halfSize);
+        }
+
+        return median;
 
     }
 
