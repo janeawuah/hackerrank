@@ -93,4 +93,37 @@ public class HackFunctions {
     }
 
 
+    public static int lonelyinteger(List<Integer> arr) {
+        // Write your code here
+        int lonelyNum = 0;
+        for(int num: arr)
+        {
+            lonelyNum = lonelyNum ^ num;
+        }
+        return lonelyNum;
+
+    }
+
+
+
+
+
+    // arr.sort(Comparator.naturalOrder());
+    // System.out.println(arr);
+
+    // if(listSize == 1)
+    // {
+    //     lonelyNum = arr.get(0);
+    // }else{
+    //        for (int i = 1; i < listSize; i++) {
+    //              if((arr.get(i)!=arr.get(i-1))) {
+    //                 lonelyNum = arr.get(i);
+    //                 System.out.println(lonelyNum);
+    //      }
+    //     }
+    // }
+
+
+
+
 }
