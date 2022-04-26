@@ -104,6 +104,29 @@ public class HackFunctions {
 
     }
 
+    public static int diagonalDifference(List<List<Integer>> arr) {
+        // Write your code here
+
+        int absDifferrence = 0;
+        int counter = arr.size()-1;
+        int sumDiagonal1 = 0;
+        int sumDiagonal2 = 0;
+
+        for(int i = 0 ; i< arr.size();i++){
+            sumDiagonal1+=arr.get(i).get(i);
+            sumDiagonal2+=arr.get(i).get(counter);
+            counter-=1;
+        }
+
+        absDifferrence= Math.abs(sumDiagonal1-sumDiagonal2);
+        //System.out.println(absDifferrence);
+        return absDifferrence;
+
+    }
+
+
+
+
 
 
 
