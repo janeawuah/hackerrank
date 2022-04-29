@@ -162,7 +162,36 @@ public class HackFunctions {
 
     }
 
+    public static void plusMinus(List<Integer> arr) {
+        // Write your code here
 
+        float positiveTotal = 0;
+        float negativeTotal = 0;
+        float zeroTotal = 0;
+
+        float numTotal = arr.size();
+
+        for (Integer integer : arr) {
+            if(integer > 0){
+                positiveTotal+=1;
+            }else if(integer < 0)
+            {
+                negativeTotal+=1;
+            }else{
+                zeroTotal+=1;
+            }
+        }
+
+
+
+        System.out.format("%.5f",positiveTotal/numTotal);
+        System.out.println(" ");
+        System.out.format("%.5f",negativeTotal/numTotal);
+        System.out.println(" ");
+        System.out.format("%.5f",zeroTotal/numTotal);
+
+
+    }
 
 
 
