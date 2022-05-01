@@ -193,6 +193,36 @@ public class HackFunctions {
 
     }
 
+    public static String timeConversion(String s) {
+        // Write your code here
+
+        StringBuilder militaryTime= new StringBuilder();
+        String [] numbers = s.split(":");
+        String meridiem = s.substring(8,10);
+        System.out.println(meridiem);
+        int hours = Integer.parseInt(numbers[0]);
+
+        if(meridiem.equals("PM") && hours == 12){
+            militaryTime.append(s.substring(0, 8));
+        }
+        else if(hours==12){
+            militaryTime.append("00");
+            militaryTime.append(s.substring(2,8));
+        }else if(meridiem.equals("AM")){
+            militaryTime.append(s.substring(0, 8));
+        }
+        else{
+            militaryTime.append(hours+12);
+            militaryTime.append(s.substring(2,8));
+        }
+        ;
+
+
+        return militaryTime.toString();
+
+    }
+
+
 
 
 
