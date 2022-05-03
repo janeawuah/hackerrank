@@ -225,6 +225,31 @@ public class HackFunctions {
 
 
 
+    public static List<Integer> gradingStudents(List<Integer> grades) {
+        // Write your code here
+
+        List<Integer> newGrades = new ArrayList<>();
+        for(Integer integer: grades){
+            if((integer>=38)&& (5-(integer%5)<3)){
+                newGrades.add(integer +(5-(integer%5)));
+                System.out.println(integer +(5-(integer%5)));
+            }
+            else{
+                newGrades.add(integer);
+                System.out.println(integer);
+            }
+        }
+
+        return newGrades;
+
+
+
+    }
+
+
+
+
+
 
 
 
