@@ -248,7 +248,28 @@ public class HackFunctions {
 
 
 
+    public static int countingValleys(int steps, String path) {
+        // Write your code here
+        int numOfValleys = 0;
+        int currentLevel = 0;
 
+        for(int i = 0; i < path.length(); i++){
+            if(path.charAt(i) == 'U') {
+                currentLevel = currentLevel +1;
+
+                if(currentLevel == 0){
+                    numOfValleys = numOfValleys + 1;
+                }
+            } else{
+                currentLevel = currentLevel - 1;
+            }
+
+        }
+
+
+
+        return numOfValleys;
+    }
 
 
 
