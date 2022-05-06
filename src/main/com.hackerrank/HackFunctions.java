@@ -272,6 +272,33 @@ public class HackFunctions {
     }
 
 
+    public static void countApplesAndOranges(int s, int t, int appleTree, int orangeTree, List<Integer> apples, List<Integer> oranges) {
+        // Write your code here
+        long applesOnRoof = 0;
+        long orangesOnRoof = 0;
+        int positionApple = 0;
+        int positionOrange  = 0;
+
+        for (int apple : apples) {
+            positionApple = appleTree + apple;
+            if(positionApple >= s && positionApple <= t){
+                applesOnRoof++;
+            }
+        }
+        System.out.println(applesOnRoof);
+
+
+        for (int orange : oranges) {
+            positionOrange = orangeTree + orange;
+            if(positionOrange >= s && positionOrange <= t){
+                orangesOnRoof = orangesOnRoof + 1;
+            }
+        }
+        System.out.println(orangesOnRoof);
+
+    }
+
+
 
 
     // arr.sort(Comparator.naturalOrder());
