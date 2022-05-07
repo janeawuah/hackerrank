@@ -300,6 +300,22 @@ public class HackFunctions {
 
 
 
+    public static int findDigits(int n) {
+        // Write your code here
+
+        int numDivisible = 0;
+        int numToEdit = n;
+        while(numToEdit > 0){
+            if(numToEdit % 10 != 0 && n % (numToEdit % 10) == 0){
+                numDivisible++;
+            }
+            numToEdit = numToEdit / 10;
+        }
+        return numDivisible;
+
+    }
+
+
 
     // arr.sort(Comparator.naturalOrder());
     // System.out.println(arr);
@@ -315,6 +331,21 @@ public class HackFunctions {
     //      }
     //     }
     // }
+
+
+
+
+
+//    int r = n;
+//    int count = 0;
+//    while(r > 0){
+//        if(r % 10 != 0 && n % (r % 10) == 0)
+//            count++;
+//        r = r / 10;
+//    }
+//    return count;
+
+//}
 
 
 
