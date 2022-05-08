@@ -1,5 +1,6 @@
 package main.com.hackerrank;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -312,6 +313,19 @@ public class HackFunctions {
             numToEdit = numToEdit / 10;
         }
         return numDivisible;
+
+    }
+
+
+    public static void extraLongFactorials(int n) {
+        // Write your code here
+        BigInteger factorial = new BigInteger("1");
+
+        for(int i = 2;i<=n; i++){
+            factorial = factorial.multiply(BigInteger.valueOf(i));
+        }
+
+        System.out.println(factorial);
 
     }
 
