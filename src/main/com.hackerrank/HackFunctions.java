@@ -329,6 +329,33 @@ public class HackFunctions {
 
     }
 
+    public static int libraryFine(int d1, int m1, int y1, int d2, int m2, int y2) {
+        // Write your code here
+        int fine;
+        if(d1 <= d2 && m1 <= m2 && y1 <= y2){
+            fine = 0;
+            System.out.println("first condition");
+        }
+
+        else if(d1 > d2 && m1 == m2 && y1 == y2){
+            fine = 15 * (d1 - d2);
+            System.out.println("second condition " + fine);
+        }
+        else if(m1 > m2 && y1 == y2){
+            fine = 500 * (m1 - m2);
+            System.out.println("third condition");
+        }
+        else if (y1 > y2){
+            fine = 10000;
+            System.out.println("last condition");
+        }else{
+            fine = 0;
+        }
+
+        return fine;
+    }
+
+
 
 
     // arr.sort(Comparator.naturalOrder());
