@@ -3,6 +3,7 @@ package main.com.hackerrank;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 
 public class HackFunctions {
@@ -353,6 +354,60 @@ public class HackFunctions {
         }
 
         return fine;
+    }
+
+
+    public static List<Integer> cutTheSticks(List<Integer> arr) {
+        // Write your code here
+
+        List <Integer> stickList = new ArrayList<>();
+        int smallest = 0;
+        int arraySize = arr.size();
+
+        while(arr.size() > 0){
+            stickList.add(arraySize);
+
+            arr.sort(Comparator.naturalOrder());
+            smallest = arr.get(0);
+
+            System.out.print(arr+ "   " + smallest + " ");
+
+            for(int i = 0; i < arr.size(); i++){
+                arr.set(i, arr.get(i)-smallest);
+                // if(arr.get(i) == 0){
+                //     arr.remove(i);
+                //     System.out.println(i);
+                // }
+            }
+
+            Iterator iterator =  arr.iterator();
+
+            while(iterator.hasNext()){
+                int num = (Integer) iterator.next();
+                if(num == 0){
+                    iterator.remove();
+                }
+            }
+
+            // for (int i = 0; i < arr.size()-1; i++) {
+            //     if(arr.get(i) == 0){
+            //         arr.remove(i);
+            //     }
+            // }
+
+            // for (Integer integer : arr) {
+            //     if(integer == 0){
+            //         arr.remove(arr.indexOf(integer));
+            //     }
+
+            // }
+
+            System.out.println(arr);
+            arraySize = arr.size();
+        }
+
+
+        return stickList;
     }
 
 
