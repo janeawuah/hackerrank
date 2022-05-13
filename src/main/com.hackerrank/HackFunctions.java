@@ -389,6 +389,34 @@ public class HackFunctions {
                 }
             }
 
+//            public static List<Integer> breakingRecords(List<Integer> scores) {
+//                // Write your code here
+//
+//                List <Integer> records = new ArrayList<>();
+//                int minRecord = scores.get(0);
+//                int maxRecord = scores.get(0);
+//                int countMin = 0;
+//                int countMax = 0;
+//
+//
+//                for (Integer integer : scores) {
+//                    if(integer > maxRecord){
+//                        maxRecord = integer;
+//                        countMax++;
+//                    }else if(integer < minRecord){
+//                        minRecord = integer;
+//                        countMin++;
+//                    }
+//                }
+//
+//                records.add(countMax);
+//                records.add(countMin);
+//
+//                return records;
+//
+//            }
+
+
             // for (int i = 0; i < arr.size()-1; i++) {
             //     if(arr.get(i) == 0){
             //         arr.remove(i);
