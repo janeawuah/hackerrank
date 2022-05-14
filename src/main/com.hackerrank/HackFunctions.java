@@ -438,6 +438,20 @@ public class HackFunctions {
         return stickList;
     }
 
+    public static int camelcase(String s) {
+        // Write your code here
+        int numOfWords = 1;
+
+        for (int i = 0; i < s.length(); i++) {
+            if(Character.isUpperCase(s.charAt(i))){
+                numOfWords++;
+            }
+        }
+
+        return numOfWords;
+    }
+
+
 
 
 
