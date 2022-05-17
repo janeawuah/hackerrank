@@ -1,10 +1,7 @@
 package main.com.hackerrank;
 
 import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class HackFunctions {
 
@@ -486,6 +483,67 @@ public class HackFunctions {
 //}
 
 
+    public static int minimumLoss(List<Long> prices) {
+        Map <Long, Integer> map = new HashMap<>();
+        int listSize = prices.size();
+        Long [] price = new Long [listSize];
+        for (int i = 0; i <listSize; i++) {
+            price[i] = prices.get(i);
+        }
 
+        long min = Long.MAX_VALUE;
+        for(int i = 0; i < price.length; i++) {
+            map.put(price[i], i);
+        }
+        Arrays.sort(price);
+        for(int i = 1; i < price.length; i++) {
+            long year = map.get(price[i]);
+            long year2 = map.get(price[i-1]);
+            long loss = price[i] - price[i-1];
+            if(year2 > year && loss < min) {
+                min = loss;
+            }
+        }
+        return (int) min;
+    }
+//     {
+//     // Write your code here
+//     Long leastLoss = price.get(0) ;
+//     int listSize = price.size();
+//     Long currentLoss =0L;
+//     List <Long> priceDifferences = new ArrayList<>();
+
+//     for (int i = 0; i < listSize; i++) {
+//         for (int j = i+1; j < listSize; j++){
+//             // if((price.get(i) - price.get(j)) > 0){
+//             //     priceDifferences.add(price.get(i) - price.get(j));
+//             // }
+//             currentLoss = price.get(i) - price.get(j);
+//             if(currentLoss > 0 && currentLoss < leastLoss ){
+//                 priceDifferences.add( currentLoss);
+//             }
+
+//         }
+//     }
+
+//     return Collections.min(priceDifferences).intValue();
+// //    price.sort(Comparator.reverseOrder());
+
+//     // for (int i = 0; i < listSize -1; i++) {
+//     //     currentLoss = Math.abs(price.get(i) - price.get(i+1));
+//     //     priceDifferences.add(currentLoss);
+//     //     // System.out.println(currentLoss);
+//     //     // if(currentLoss > 0){
+//     //     //     priceDifferences.add(currentLoss);
+//     //     // }
+//     // }
+//     // }
+
+//     // priceDifferences.sort(Comparator.naturalOrder());
+//     // System.out.println(priceDifferences);
+//     // leastLoss = priceDifferences.get(0);
+//     // return leastLoss.intValue();
+
+//     }
 
 }
