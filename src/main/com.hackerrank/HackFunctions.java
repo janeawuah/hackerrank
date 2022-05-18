@@ -566,4 +566,19 @@ public class HackFunctions {
 
         return brr;
     }
+
+    public static List<Integer> missingNumbers(List<Integer> arr, List<Integer> brr) {
+        // Write your code here
+        for(Integer integer: arr){
+            brr.remove(integer);
+        }
+
+        Set<Integer> set = new LinkedHashSet<>();
+        set.addAll(brr);
+        brr.clear();
+        brr.addAll(set);
+        brr.sort(Comparator.naturalOrder());
+
+        return brr;
+    }
 }
