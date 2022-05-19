@@ -581,4 +581,25 @@ public class HackFunctions {
 
         return brr;
     }
+
+    public static void miniMaxSum(List<Integer> arr) {
+        // Write your code here
+        Long minSum = 0L;
+        Long maxSum = 0L;
+        arr.sort(Comparator.naturalOrder());
+
+        int [] Arr = new int[5];
+
+        for(int i = 0; i<4;i++){
+            minSum+=arr.get(i);
+        }
+
+        for(int i = 1; i<5;i++){
+            maxSum+=arr.get(i);
+        }
+
+        System.out.println(minSum + " " + maxSum);
+
+
+    }
 }
