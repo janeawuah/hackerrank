@@ -143,7 +143,7 @@ public class HackFunctions {
     }
 
 
-    public static void miniMaxSum(List<Integer> arr) {
+    public static void miniMaxSum1(List<Integer> arr) {
         // Write your code here
         long maxSum =0 ;
         long minSum = 0;
@@ -602,4 +602,29 @@ public class HackFunctions {
 
 
     }
-}
+
+    public static void findZigZagSequence(int [] a, int n) {
+        Arrays.sort(a);
+        int mid = (n + 1) / 2;
+        int counter = mid;
+        // int temp = a[mid];
+        // a[mid] = a[n - 1];
+        // a[n - 1] = temp;
+
+        int newA[] = new int[n];
+        for (int i = 0; i < mid - 1; i++) {
+            newA[i] = a[i];
+        }
+        newA[mid - 1] = a[n - 1];
+        for (int i = n - 2; i >= mid - 1; i--) {
+            newA[counter] = a[i];
+            counter++;
+        }
+
+        for (int i = 0; i < n; i++) {
+            if (i > 0) System.out.print(" ");
+            System.out.print(newA[i]);
+        }
+    }
+
+    }
