@@ -103,6 +103,19 @@ public class HackFunctions {
 
     }
 
+
+    public static int lonelyinteger2(List<Integer> a) {
+        // Write your code here
+        for (Integer integer : a) {
+            if(Collections.frequency(a, integer) == 1){
+                return integer;
+            }
+
+        }
+        return 0;
+    }
+
+
     public static int diagonalDifference(List<List<Integer>> arr) {
         // Write your code here
 
@@ -627,4 +640,7 @@ public class HackFunctions {
         }
     }
 
-    }
+
+
+
+}
