@@ -640,6 +640,21 @@ public class HackFunctions {
         }
     }
 
+    public static String pangrams(String s) {
+        // Write your code here
+        s = s.toLowerCase();
+        boolean pangram = true;
+
+        for(char i = 'a'; i <= 'z'; i++) {
+            if(!s.contains(String.valueOf(i))) {
+                pangram = false;
+                break;
+            }
+        }
+        if(pangram) return "pangram";
+        else return "not pangram";
+    }
+
 
 
 
