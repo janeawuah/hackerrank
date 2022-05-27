@@ -655,6 +655,26 @@ public class HackFunctions {
         else return "not pangram";
     }
 
+    public static int diagonalDifference2(List<List<Integer>> arr) {
+        // Write your code here
+        int arrlen = arr.size();
+        int leftSide = 0;
+        int rightSide = 0;
+        int counter = arrlen -1;
+
+        int matrix [] = new int [arrlen];
+        for(int i = 0; i < arrlen; i++){
+            leftSide = leftSide + arr.get(i).get(i);
+            rightSide = rightSide + arr.get(counter).get(i);
+            counter--;;
+        }
+
+
+        return Math.abs(leftSide - rightSide);
+
+    }
+
+
 
 
 
