@@ -674,6 +674,20 @@ public class HackFunctions {
 
     }
 
+    public static List<Integer> countingSort(List<Integer> arr) {
+        // Write your code here
+        int lenArr = arr.size();
+        Integer [] newArr = new Integer[100];
+        Arrays.fill(newArr,0);
+
+        for (Integer num : arr) {
+            newArr[num]++;
+        }
+
+        return Arrays.asList(newArr);
+
+    }
+
 
 
 
