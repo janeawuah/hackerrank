@@ -688,6 +688,24 @@ public class HackFunctions {
 
     }
 
+    public static int towerBreakers(int n, int m) {
+        // Write your code here
+        int winner = 0;
+        // if(n%2 ==1 || (n+m)%2 ==1){
+        //     winner =  1;
+        // }else{
+        //     winner = 2;
+        // }
+
+        if(n%2 == 0 || m == 1){
+            winner = 2;
+        }else{
+            winner = 1;
+        }
+        return winner;
+
+    }
+
 
 
 
