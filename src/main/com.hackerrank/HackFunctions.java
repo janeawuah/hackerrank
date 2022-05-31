@@ -706,6 +706,24 @@ public class HackFunctions {
 
     }
 
+    public static int sockMerchant(int n, List<Integer> ar) {
+        // Write your code here
+
+        ar.sort(Comparator.naturalOrder());
+
+        int numPair = 0;
+
+        for (int i = 0; i < n-1; i++) {
+            if(ar.get(i) == ar.get(i+1)){
+                numPair++;
+                i++;
+            }
+        }
+
+        return numPair;
+
+    }
+
 
 
 
