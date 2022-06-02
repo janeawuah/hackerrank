@@ -37,4 +37,31 @@ public class Main {
 
 
     }
+
+    public static int superDigit(String n, int k) {
+
+        int superSum = stringSum(n) * k;
+
+        if(superSum>9){
+            superSum = stringSum(String.valueOf(superSum));
+        }
+
+
+        return superSum;
+
+    }
+
+    public static int stringSum(String num){
+        if(num.length() == 1){
+            return Integer.parseInt(num);
+        }
+        else{
+            int sum = 0;
+            for (int i = 0; i < num.length(); i++) {
+                sum+= Integer.parseInt(String.valueOf(num.charAt(i)));
+            }
+
+            return stringSum(String.valueOf(sum));
+        }
+    }
 }
