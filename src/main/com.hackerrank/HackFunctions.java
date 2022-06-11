@@ -751,6 +751,36 @@ public class HackFunctions {
         return reversedString;
     }
 
+    static String sortString (String string){
+        // System.out.println(string);
+
+        char newString[] = string.toCharArray();
+
+        char temp;
+
+        int i = 0;
+        while (i <= newString.length) {
+            int j = i + 1;
+            while (j <= newString.length) {
+                if (newString[j] < newString[i]) {
+                    temp = newString[i];
+                    newString[i] = newString[j];
+                    newString[j] = temp;
+                }
+                j += 1;
+            }
+            i += 1;
+        }
+
+        for (char c : newString) {
+            System.out.println(c);
+        }
+
+
+        return newString.toString();
+
+    }
+
 
 
 }
