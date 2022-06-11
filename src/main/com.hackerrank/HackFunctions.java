@@ -743,6 +743,14 @@ public class HackFunctions {
         }
     }
 
+    public static String reverseString(String string){
+        String reversedString = "";
+        for(int i = string.length() -1; i>-1;i--){
+            reversedString +=string.charAt(i);
+        }
+        return reversedString;
+    }
+
 
 
 }
