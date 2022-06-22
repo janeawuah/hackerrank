@@ -58,6 +58,28 @@ public class Main {
         System.out.println("France: " + france.format(payment));
 
 
+        //series
+        Scanner in = new Scanner(System.in);
+        int t=in.nextInt();
+        for(int i=0;i<t;i++){
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int n = in.nextInt();
+
+            double total = a + (Math.pow(2,0) *b);
+            System.out.print((int )total);
+
+
+            for(int j = 1; j < n; j++){
+                System.out.print(" ");
+                total += Math.pow(2,j) *b;
+                System.out.print((int )total);
+
+            }
+
+            System.out.println("");
+        }
+        in.close();
 
     }
 
